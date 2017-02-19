@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             for(int[] winningPosition : winningPositions)
             {
                 if(gamestate[winningPosition[0]] == gamestate[winningPosition[1]] &&
-                    gamestate[winningPosition[1]] == gamestate[winningPosition[2]] &&
+                        gamestate[winningPosition[1]] == gamestate[winningPosition[2]] &&
                         gamestate[winningPosition[0]] !=2)
                 {
 
