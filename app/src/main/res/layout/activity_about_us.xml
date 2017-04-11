@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anupam.braintrariner.AboutUs">
+
+    <TextView
+        android:id="@+id/tvAboutUs"
+        android:layout_width="368dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="More Apps"
+        android:textColor="#07408d"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="342dp"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/tvMoreApp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Tic Tac Toe"
+        android:textColor="#892915"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Version: 1.0"
+        android:textColor="#0857ab"
+        android:textSize="16sp"
+
+        android:textStyle="italic"
+        android:typeface="serif"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Developed by:"
+        android:textColor="#429944"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:layout_marginBottom="18dp"
+        android:layout_above="@+id/ivLogo"
+        android:layout_alignLeft="@+id/tvAboutUs"
+        android:layout_alignStart="@+id/tvAboutUs" />
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/tvAboutUs"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+
+        android:id="@+id/tvMoreApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="42dp"
+        android:gravity="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anupam Deb"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignBottom="@+id/tv3"
+        android:layout_toRightOf="@+id/tv3"
+        android:layout_toEndOf="@+id/tv3" />
+
+</RelativeLayout>

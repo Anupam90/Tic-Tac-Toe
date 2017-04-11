@@ -1,7 +1,11 @@
 package com.example.anupam.tictactoe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
@@ -33,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
             if(activePlayer == 0)
             {
-                counter.setImageResource(R.drawable.yellow);
+                counter.setImageResource(R.drawable.hillary);
 
                 activePlayer = 1;
             }
             else
             {
-                counter.setImageResource(R.drawable.red);
+                counter.setImageResource(R.drawable.trump);
 
                 activePlayer = 0;
             }
@@ -54,11 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
                     //someone has won
 
-                    String winner = "Red";
+                    String winner = "Trump";
 
                     if(gamestate[winningPosition[0]] == 0)
                     {
-                        winner = "yellow";
+                        winner = "Hillary";
                     }
                     TextView textViewWinnerMessage = (TextView) findViewById(R.id.textViewWinnerMessage);
                     textViewWinnerMessage.setText(winner + " has won!");
@@ -121,5 +125,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.itemId:
+                    Intent intent = new Intent(MainActivity.this, AboutUs.class);
+                    startActivity(intent);
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
